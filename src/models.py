@@ -56,7 +56,7 @@ class Comment(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "email": self.email,
+            "author_id": self.author.id
             # do not serialize the password, its a security breach
         }
 
